@@ -1,17 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-
-import AppTextInput from './app/components/AppTextInput';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <AppTextInput autoCapitalize='none' autoCorrect={false} placeholder="UserName"/>
-      <AppTextInput
-      autoCapitalize='none'
-      autoCorrect={false}
-      placeholder="Enter your Password"/>
-    </View>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
 
